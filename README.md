@@ -41,11 +41,11 @@ world necessarily exist before someone can travel to a place as a *Destination*.
 
 ### Q3
 
-**Agent** - 2827/5669
-**Patient** - 1906/5669
-**Instrument** - 1499/ 5669
-**Result** - 144/5669
-**Destination** - 0/5669
+**Agent** - 2827/5669 <br>
+**Patient** - 1906/5669 <br>
+**Instrument** - 1499/ 5669 <br>
+**Result** - 144/5669 <br>
+**Destination** - 0/5669 <br>
 
 Unfortunately, I wasn't able to develop a query that picked out any Destination roles from the data. 
 This is probably a shortcoming of thematic role theory rather than proto-role theory because
@@ -57,7 +57,7 @@ definitions for these and harder to collect a lot of data on them.
 
 ## 3.2 Modeling
 
-###Q1 My model architecture basically follows pretty cleanly from Joe Barrow's tutorial as
+### Q1 My model architecture basically follows pretty cleanly from Joe Barrow's tutorial as
 well as from the proto-role prediction paper. The task in this homework (semantic role labeling from 
 proto-roles) is essentially the reverse of the task in the Rudinger SPRL paper. So, accordingly, it probably makes sense to borrow ideas from that architecture as well.
 
