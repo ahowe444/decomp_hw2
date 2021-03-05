@@ -45,8 +45,29 @@ world necessarily exist before someone can travel to a place as a *Destination*.
 **Patient** - 1906/5669
 **Instrument** - 1499/ 5669
 **Result** - 144/5669
-** Destination** - 0/5669
+**Destination** - 0/5669
 
 Unfortunately, I wasn't able to develop a query that picked out any Destination roles from the data. 
 This is probably a shortcoming of thematic role theory rather than proto-role theory because
 it is not clear that there ought to be another role apart from the Location role. 
+
+Some roles occur more frequently than other just as Dowty predicted, there are a small set of frequently
+occuring roles and there is also a long tail of less common roles. It is harder to develop proto-role
+definitions for these and harder to collect a lot of data on them. 
+
+## 3.2 Modeling
+
+###Q1 My model architecture basically follows pretty cleanly from Joe Barrow's tutorial as
+well as from the proto-role prediction paper. The task in this homework (semantic role labeling from 
+proto-roles) is essentially the reverse of the task in the Rudinger SPRL paper. So, accordingly, it probably makes sense to borrow ideas from that architecture as well.
+
+1) First I embed my tokens into GloVe embeddings. 
+2) Next, each embedding is passed through a Bidirectional LSTM sequence encoder into an output of
+[num_batch, num_sequence, embedding_dim]
+3) I extract the LSTM hidden states for the predicate and argument positions in the sentence as shown in 
+the Rudinger paper.
+4) I concatenate these 50 dim vectors into a 100 dim vector and pass it through a feed forward linear
+layer. There is no ReLU since it will only reduce information content. 
+5) Feed forward output head straight to the CrossEntropyLoss which itself computes the softmax. 
+
+**NOTE** I tried to add other linear layers and ReLU between them but this reduced accuracy.
