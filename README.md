@@ -19,7 +19,7 @@ and I wanted to see if I could develop their respective proto-role definitions. 
 hard to tell whether low model performance on these low-frequency roles is due to a bad proto-
 role definition or due to insufficient training data. 
 
-### Q1
+### Q2
 
 **Patient** - As mentioned above, to motivate my definition for Patient, I simply took the 
 *volition* and *instigation* roles which are characteristic of the Agent definition and reversed
@@ -38,3 +38,15 @@ involves a change of location, otherwise the argument should simply be a Locatio
 features `location`, `change_of_location`, and `existed_before`. I assume that locations in the physical
 world necessarily exist before someone can travel to a place as a *Destination*.
 
+
+### Q3
+
+**Agent** - 2827/5669
+**Patient** - 1906/5669
+**Instrument** - 1499/ 5669
+**Result** - 144/5669
+** Destination** - 0/5669
+
+Unfortunately, I wasn't able to develop a query that picked out any Destination roles from the data. 
+This is probably a shortcoming of thematic role theory rather than proto-role theory because
+it is not clear that there ought to be another role apart from the Location role. 
