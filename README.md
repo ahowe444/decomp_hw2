@@ -57,7 +57,8 @@ definitions for these and harder to collect a lot of data on them.
 
 ## 3.2 Modeling
 
-### Q1 My model architecture basically follows pretty cleanly from Joe Barrow's tutorial as
+### Q1 
+My model architecture basically follows pretty cleanly from Joe Barrow's tutorial as
 well as from the proto-role prediction paper. The task in this homework (semantic role labeling from 
 proto-roles) is essentially the reverse of the task in the Rudinger SPRL paper. So, accordingly, it probably makes sense to borrow ideas from that architecture as well.
 
@@ -69,5 +70,11 @@ the Rudinger paper.
 4) I concatenate these 50 dim vectors into a 100 dim vector and pass it through a feed forward linear
 layer. There is no ReLU since it will only reduce information content. 
 5) Feed forward output head straight to the CrossEntropyLoss which itself computes the softmax. 
+
+### Q2
+I did not use any additional features, because I figured that using a BiLSTM which is a recurrent
+architecture would automatically encode information more effectively than
+I could have by feature engineering. 
+
 
 **NOTE** I tried to add other linear layers and ReLU between them but this reduced accuracy.
