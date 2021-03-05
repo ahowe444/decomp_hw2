@@ -78,3 +78,11 @@ I could have by feature engineering.
 
 
 **NOTE** I tried to add other linear layers and ReLU between them but this reduced accuracy.
+
+## 3.3 Exploration
+
+### Q1
+There are in fact examples that seem to be wrong. Just take this sentence from my Agent train data for example: *Over 300 Iraqis are reported dead and 500 wounded in Fallujah alone.* The predicate here is labeled 5 which refers to *reported* and the argument is 3, *Iraqis*, but here *Iraqis* is not agentive, instead it is closer to an Experiencer/Theme situation. There of course are certain modification that could be made to the proto-role feature defintion such as further restricting the values rather than 
+using a binary > 0, < 0 dichotomy. But, this strategy risks cutting out *valid* agents that didn't meet the more restrictive critera. We probably have to accept that there will be noise in our data since we 
+can never craft a perfect rule, especially since our data is derived from non-linguist crowdsourced annotators. 
+
