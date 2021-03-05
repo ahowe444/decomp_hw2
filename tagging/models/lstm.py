@@ -8,7 +8,6 @@ from allennlp.modules.text_field_embedders import TextFieldEmbedder
 from allennlp.modules.seq2seq_encoders.seq2seq_encoder import Seq2SeqEncoder
 from allennlp.training.metrics import FBetaMeasure
 
-
 from allennlp.nn.util import get_text_field_mask
 from typing import Dict, Optional
 
@@ -46,19 +45,10 @@ class NerLSTM(Model):
 
       pred_arg_batch = torch.stack(pred_arg_vectors)
       classified = self._classifier(pred_arg_batch)
-
-#      one_hot_labels = []
-#      for l in label:
-#        if l == 1:
-#          one_hot_labels.append([0,1])
-#        else:
-#          one_hot_labels.append([1,0])
-#      one_hot_labels = torch.Tensor(one_hot_labels)
-#      print(one_hot_labels.shape)
-  
-
-
-      # Do I need mask as an argument here?
+      
+      # According to the documentation, this particular FBetaMeasure
+      # requires the prediction be [num_batch, num_classes ] and 
+      # the label only be [num_batch]
       self._f1(classified, label)
 
       output: Dict[str, torch.Tensor] = {}
