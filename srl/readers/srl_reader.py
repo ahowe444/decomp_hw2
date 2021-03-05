@@ -14,8 +14,8 @@ from allennlp.data.tokenizers import Token
 from allennlp.data.fields import Field, TextField, LabelField, ArrayField
 
 
-@DatasetReader.register("conll_03_reader")
-class CoNLL03DatasetReader(DatasetReader):
+@DatasetReader.register("srl_reader")
+class DecompDatasetReader(DatasetReader):
 
   def __init__(self,
                 token_indexers: Dict[str, TokenIndexer] = None,

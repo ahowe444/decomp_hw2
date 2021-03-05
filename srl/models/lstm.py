@@ -11,8 +11,8 @@ from allennlp.training.metrics import FBetaMeasure
 from allennlp.nn.util import get_text_field_mask
 from typing import Dict, Optional
 
-@Model.register('ner_lstm')
-class NerLSTM(Model):
+@Model.register('srl_lstm')
+class SRLLSTM(Model):
   
   def __init__(self,
               vocab: Vocabulary,
@@ -22,8 +22,10 @@ class NerLSTM(Model):
   
         self._embedder = embedder
         self._encoder = encoder
-        self._classifier = nn.Linear(in_features=2*encoder.get_output_dim(),
-                                     out_features=vocab.get_vocab_size('labels'))
+        self._classifier1 = nn.Linear(in_features=2*encoder.get_output_dim(),
+                                     out_features=2)
+#        self.relu1 = nn.ReLU()
+#        self._classifier2 = nn.Linear(in_features = 50, out_features=2)
 
         self._f1 = FBetaMeasure(average='macro')
         self._loss = nn.CrossEntropyLoss()
@@ -44,7 +46,9 @@ class NerLSTM(Model):
         pred_arg_vectors.append(cat_vector)
 
       pred_arg_batch = torch.stack(pred_arg_vectors)
-      classified = self._classifier(pred_arg_batch)
+ #     classified = self.relu1(self._classifier1(pred_arg_batch))
+      classified = self._classifier1(pred_arg_batch)
+      
       
       # According to the documentation, this particular FBetaMeasure
       # requires the prediction be [num_batch, num_classes ] and 

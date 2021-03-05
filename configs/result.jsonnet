@@ -1,6 +1,6 @@
 {
   dataset_reader: {
-    type: 'conll_03_reader',
+    type: 'srl_reader',
     lazy: false,
     token_indexers: {
       words: {
@@ -8,10 +8,10 @@
       }
     }
   },
-  train_data_path: 'data/decomp_data/agent_train.data',
-  validation_data_path: 'data/decomp_data/agent_dev.data',
+  train_data_path: 'data/decomp_data/result_train.data',
+  validation_data_path: 'data/decomp_data/result_dev.data',
   model: {
-    type: 'ner_lstm',
+    type: 'srl_lstm',
     embedder: {
       token_embedders: {
         words: {
@@ -43,7 +43,7 @@
     validation_metric: '-loss',
     optimizer: {
       type: 'adam',
-      lr: 0.003
+      lr: 0.001
     }
   }
 }

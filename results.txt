@@ -1,0 +1,268 @@
+Agent Role Results
+----------------------
+Train/Dev
+-----------
+
+2021-03-05 13:24:44,970 - INFO - allennlp.common.util - Metrics: {
+  "best_epoch": 5,
+  "peak_worker_0_memory_MB": 345.6484375,
+  "training_duration": "0:01:38.891762",
+  "training_start_epoch": 0,
+  "training_epochs": 7,
+  "epoch": 7,
+  "training_precision": 0.8663777112960815,
+  "training_recall": 0.8658918142318726,
+  "training_fscore": 0.8658861517906189,
+  "training_loss": 0.3180698385311051,
+  "training_worker_0_memory_MB": 345.28515625,
+  "validation_precision": 0.7850660085678101,
+  "validation_recall": 0.7822633981704712,
+  "validation_fscore": 0.7812020182609558,
+  "validation_loss": 0.49521458335220814,
+  "best_validation_precision": 0.7831083536148071,
+  "best_validation_recall": 0.782039999961853,
+  "best_validation_fscore": 0.7814846038818359,
+  "best_validation_loss": 0.4582282178299992
+}
+
+
+Train/Test
+-----------
+2021-03-05 13:24:27,593 - INFO - allennlp.common.util - Metrics: {
+  "best_epoch": 4,
+  "peak_worker_0_memory_MB": 344.88671875,
+  "training_duration": "0:01:26.548234",
+  "training_start_epoch": 0,
+  "training_epochs": 6,
+  "epoch": 6,
+  "training_precision": 0.8656379580497742,
+  "training_recall": 0.8644535541534424,
+  "training_fscore": 0.8644058704376221,
+  "training_loss": 0.3304710087860808,
+  "training_worker_0_memory_MB": 344.88671875,
+  "validation_precision": 0.7705748081207275,
+  "validation_recall": 0.7739819884300232,
+  "validation_fscore": 0.7706069946289062,
+  "validation_loss": 0.49262022393852917,
+  "best_validation_precision": 0.7855067253112793,
+  "best_validation_recall": 0.7891019582748413,
+  "best_validation_fscore": 0.7856000065803528,
+  "best_validation_loss": 0.4627798673377108
+}
+
+
+Patient Role Results
+--------------
+
+Train/Dev 
+----------
+
+2021-03-05 13:28:29,515 - INFO - allennlp.common.util - Metrics: {
+  "best_epoch": 3,
+  "peak_worker_0_memory_MB": 345.94140625,
+  "training_duration": "0:01:17.594387",
+  "training_start_epoch": 0,
+  "training_epochs": 5,
+  "epoch": 5,
+  "training_precision": 0.7702685594558716,
+  "training_recall": 0.7355462312698364,
+  "training_fscore": 0.7471058368682861,
+  "training_loss": 0.46009801884019186,
+  "training_worker_0_memory_MB": 345.94140625,
+  "validation_precision": 0.6629372835159302,
+  "validation_recall": 0.6531298160552979,
+  "validation_fscore": 0.6569579839706421,
+  "validation_loss": 0.5924952247817266,
+  "best_validation_precision": 0.6504861116409302,
+  "best_validation_recall": 0.6218721866607666,
+  "best_validation_fscore": 0.6276254653930664,
+  "best_validation_loss": 0.5627909016452337
+}
+
+
+Train/Test
+----------
+2021-03-05 13:28:25,434 - INFO - allennlp.common.util - Metrics: {
+  "best_epoch": 3,
+  "peak_worker_0_memory_MB": 345.30078125,
+  "training_duration": "0:01:14.320962",
+  "training_start_epoch": 0,
+  "training_epochs": 5,
+  "epoch": 5,
+  "training_precision": 0.7714440226554871,
+  "training_recall": 0.7364695072174072,
+  "training_fscore": 0.7481129169464111,
+  "training_loss": 0.4542119260187502,
+  "training_worker_0_memory_MB": 345.30078125,
+  "validation_precision": 0.6365649700164795,
+  "validation_recall": 0.6310786008834839,
+  "validation_fscore": 0.6333467364311218,
+  "validation_loss": 0.5825356418517098,
+  "best_validation_precision": 0.646060585975647,
+  "best_validation_recall": 0.5976014733314514,
+  "best_validation_fscore": 0.5991913676261902,
+  "best_validation_loss": 0.5770355898942521
+}
+
+Instrument Role Results
+------------------
+
+Train/Dev
+----------
+2021-03-05 13:32:33,555 - INFO - allennlp.common.util - Metrics: {
+  "best_epoch": 6,
+  "peak_worker_0_memory_MB": 347.00390625,
+  "training_duration": "0:01:48.273967",
+  "training_start_epoch": 0,
+  "training_epochs": 8,
+  "epoch": 8,
+  "training_precision": 0.8588886260986328,
+  "training_recall": 0.8315045833587646,
+  "training_fscore": 0.8436633944511414,
+  "training_loss": 0.28472713486831863,
+  "training_worker_0_memory_MB": 347.00390625,
+  "validation_precision": 0.6793907880783081,
+  "validation_recall": 0.6671324968338013,
+  "validation_fscore": 0.6724593639373779,
+  "validation_loss": 0.48972275200005816,
+  "best_validation_precision": 0.6851929426193237,
+  "best_validation_recall": 0.673235297203064,
+  "best_validation_fscore": 0.6784855127334595,
+  "best_validation_loss": 0.4696022608366452
+}
+
+
+
+
+Train/Test
+----------
+2021-03-05 13:32:06,692 - INFO - allennlp.common.util - Metrics: {
+  "best_epoch": 3,
+  "peak_worker_0_memory_MB": 345.73046875,
+  "training_duration": "0:01:16.146870",
+  "training_start_epoch": 0,
+  "training_epochs": 5,
+  "epoch": 5,
+  "training_precision": 0.7957911491394043,
+  "training_recall": 0.7509695291519165,
+  "training_fscore": 0.7682026624679565,
+  "training_loss": 0.36487387615458045,
+  "training_worker_0_memory_MB": 345.73046875,
+  "validation_precision": 0.6653846502304077,
+  "validation_recall": 0.6330491304397583,
+  "validation_fscore": 0.6429551243782043,
+  "validation_loss": 0.49250638952006154,
+  "best_validation_precision": 0.6498149037361145,
+  "best_validation_recall": 0.6080608367919922,
+  "best_validation_fscore": 0.6171428561210632,
+  "best_validation_loss": 0.4887517452684801
+}
+
+
+Destination Role Results
+-------------------------
+
+
+Train/Dev
+---------
+2021-03-05 13:36:26,660 - INFO - allennlp.common.util - Metrics: {
+  "best_epoch": 9,
+  "peak_worker_0_memory_MB": 345.01953125,
+  "training_duration": "0:02:08.032029",
+  "training_start_epoch": 0,
+  "training_epochs": 9,
+  "epoch": 9,
+  "training_precision": 0.5,
+  "training_recall": 0.5,
+  "training_fscore": 0.5,
+  "training_loss": 2.98408982424927e-06,
+  "training_worker_0_memory_MB": 345.01953125,
+  "validation_precision": 0.5,
+  "validation_recall": 0.5,
+  "validation_fscore": 0.5,
+  "validation_loss": 1.8317157147787623e-06,
+  "best_validation_precision": 0.5,
+  "best_validation_recall": 0.5,
+  "best_validation_fscore": 0.5,
+  "best_validation_loss": 1.8317157147787623e-06
+}
+
+
+Train/Test
+-----------
+2021-03-05 13:36:22,481 - INFO - allennlp.common.util - Metrics: {
+  "best_epoch": 9,
+  "peak_worker_0_memory_MB": 344.71484375,
+  "training_duration": "0:02:05.396672",
+  "training_start_epoch": 0,
+  "training_epochs": 9,
+  "epoch": 9,
+  "training_precision": 0.5,
+  "training_recall": 0.5,
+  "training_fscore": 0.5,
+  "training_loss": 3.4431624571753773e-06,
+  "training_worker_0_memory_MB": 344.71484375,
+  "validation_precision": 0.5,
+  "validation_recall": 0.5,
+  "validation_fscore": 0.5,
+  "validation_loss": 2.6083356965246047e-06,
+  "best_validation_precision": 0.5,
+  "best_validation_recall": 0.5,
+  "best_validation_fscore": 0.5,
+  "best_validation_loss": 2.6083356965246047e-06
+}
+
+
+Result Role Results
+---------------------
+
+Train/Dev
+-----------
+2021-03-05 13:39:04,903 - INFO - allennlp.common.util - Metrics: {
+  "best_epoch": 3,
+  "peak_worker_0_memory_MB": 346.41015625,
+  "training_duration": "0:01:14.105311",
+  "training_start_epoch": 0,
+  "training_epochs": 5,
+  "epoch": 5,
+  "training_precision": 0.9224892854690552,
+  "training_recall": 0.6106586456298828,
+  "training_fscore": 0.6715521812438965,
+  "training_loss": 0.06485835821191227,
+  "training_worker_0_memory_MB": 346.41015625,
+  "validation_precision": 0.6016771793365479,
+  "validation_recall": 0.5577380657196045,
+  "validation_fscore": 0.5728909969329834,
+  "validation_loss": 0.0946004590031838,
+  "best_validation_precision": 0.48934754729270935,
+  "best_validation_recall": 0.5,
+  "best_validation_fscore": 0.49461641907691956,
+  "best_validation_loss": 0.08766836866025667
+}
+
+
+
+Train/Test
+----------
+2021-03-05 13:38:48,587 - INFO - allennlp.common.util - Metrics: {
+  "best_epoch": 2,
+  "peak_worker_0_memory_MB": 345.54296875,
+  "training_duration": "0:01:00.783660",
+  "training_start_epoch": 0,
+  "training_epochs": 4,
+  "epoch": 4,
+  "training_precision": 0.8929476737976074,
+  "training_recall": 0.5724641680717468,
+  "training_fscore": 0.6177987456321716,
+  "training_loss": 0.07336791690580245,
+  "training_worker_0_memory_MB": 345.54296875,
+  "validation_precision": 0.7365269660949707,
+  "validation_recall": 0.5255477428436279,
+  "validation_fscore": 0.5404165983200073,
+  "validation_loss": 0.12086013412283761,
+  "best_validation_precision": 0.4858208894729614,
+  "best_validation_recall": 0.5,
+  "best_validation_fscore": 0.49280846118927,
+  "best_validation_loss": 0.11225154599758672
+}
+
