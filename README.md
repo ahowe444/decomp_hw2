@@ -56,7 +56,7 @@ occuring roles and there is also a long tail of less common roles. It is harder 
 definitions for these and harder to collect a lot of data on them. 
 
 ## 3.2 Modeling
-
+---
 ### Q1 
 My model architecture basically follows pretty cleanly from Joe Barrow's tutorial as
 well as from the proto-role prediction paper. The task in this homework (semantic role labeling from 
@@ -80,9 +80,43 @@ I could have by feature engineering.
 **NOTE** I tried to add other linear layers and ReLU between them but this reduced accuracy.
 
 ## 3.3 Exploration
-
+---
 ### Q1
 There are in fact examples that seem to be wrong. Just take this sentence from my Agent train data for example: *Over 300 Iraqis are reported dead and 500 wounded in Fallujah alone.* The predicate here is labeled 5 which refers to *reported* and the argument is 3, *Iraqis*, but here *Iraqis* is not agentive, instead it is closer to an Experiencer/Theme situation. There of course are certain modification that could be made to the proto-role feature defintion such as further restricting the values rather than 
 using a binary > 0, < 0 dichotomy. But, this strategy risks cutting out *valid* agents that didn't meet the more restrictive critera. We probably have to accept that there will be noise in our data since we 
 can never craft a perfect rule, especially since our data is derived from non-linguist crowdsourced annotators. 
+
+### Q2
+
+Unfortunately, I find that my model is not very good at distinguishing minimals pairs. I included 
+three minimals pairs in the file `minimal_pair.py` which can be run with the predict command from
+Joe Barrow's tutorial. I ran both my Agent and Patient models on these minimal pairs and the
+Patient model failed all three. One example is the following
+1) Mary was kissed by John on the beach. (kissed, Mary, Agent)
+2) Mary was kissed by John on the beach (kissed, John, Patient)
+3) John kissed Mary on the beach (kissed, Mary, Patient)
+
+The model predicted the same class for all of these. 
+
+## 3.4 Extension
+---
+### Q1
+One way to check this would be to run each role-label model on each example get the predictions for all 5
+roles for a single example. Then cross-tab and convert to correlation matrix in sklearn and you will see if any of your roles appear to be correlated. 
+
+### Q2
+In addition to saving space, a multi role classifier may benefit from a more diverse signal rather than
+a binary one. For example, it's not that Agent and Patient are totally independent theta role, instead 
+they co-occur, where there is an Agent there is probably a patient, same with Theme/Experiencer. Thus, 
+there may be some benefit from *weight sharing* that may be able capture these relationships in a
+neural representation which is not possible in a binary paradigm.
+
+### Q3 
+A bag of words model (which is what I have used) like GloVe will probably perform worse than skipgram word2vec embeddings which might capture more syntactic information which determines to some
+extent, a word's thematic role.
+
+### Q4
+First I would look to encode more strongly syntactic information. For example, is the argument an internal 
+argument or an external one, or is the argument part of an embedded clause. Presumably the BiLSTM encodes this to some extent. And this is because arguments clearly are correlated with their synactic surface representation. I would also like to use a part of speech tagger or use syntactic categories since while in many cases, arguments are DPs that contain NPs, there are also PPs seen frequently with thematic roles like Instrument (*with a sword*) and other types of roles and in ditransitives. 
+
 
