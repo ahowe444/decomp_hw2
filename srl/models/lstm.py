@@ -29,6 +29,7 @@ class SRLLSTM(Model):
 
         self._f1 = FBetaMeasure(average='macro')
         self._loss = nn.CrossEntropyLoss()
+        self.soft = nn.Softmax(dim=1)
 
   def forward(self,
               tokens: Dict[str, torch.Tensor],
@@ -59,6 +60,7 @@ class SRLLSTM(Model):
 
       if label is not None:
         output["loss"] = self._loss(classified, label)
+        output["pred"] = torch.argmax(self.soft(classified))
 
       return output
 
